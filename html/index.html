@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>A propos</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/forces_faiblesses.css">
+    <link rel="stylesheet" href="../css/exemples.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <header>
+        <div class="left-header">
+            <span>TK | WAAPI</span>
+        </div>
+        <div class="menu-header">
+            <a href="../html/index.html"> A propos </a>
+            <a href="#forces_faiblesses"> Forces et faiblesses </a>
+            <a href="#utilisation"> Exemple </a>
+        </div>
+    </header>
+    <div class="bienvenu">
+        <div class="texte-bienvenu">
+
+            <h1>Bienvenu.e dans <br> le monde <br> de WAAPI !</h1>
+
+        </div>
+        <div class="animation-bienvenu">
+            <img class="img-welcome" src="../image/abstract-welcome.png" alt="SVG de bienvenu" height="60%"
+                width="50%" />
+            <div class="rose"></div>
+            <div class="bleu"></div>
+            <div class="orange"></div>
+            <div class="vert"></div>
+        </div>
+    </div>
+    <div id="a-propos" class="section">
+        <div class="barre-separation centered">
+            <div class="inner-barre"></div>
+        </div>
+        <span>WAAPI (Web Animation API)</span>
+        <h2>Qu'est ce que c'est ?</h2>
+        <div class="txt-section">
+            <p>C'est une nouvelle <b>API Javascript</b> réalisée par des ingénieurs de Mozilla et Google.
+                Elle permet de réaliser du contenu
+                <b>animé</b> controlable sur des formes et SVG, comme on le ferait en CSS. A la différence que 
+                l'API a été conçu pour faire un pont entre les animations et transitions css, et les animations javascript.
+                Cette différence permet d'utiliser les propriétés données par le css (avec des noms plus ou moins semblables) 
+                et les valeurs dynamiques par le javascript.
+            </p>
+        </div>
+    </div>
+
+    <div id="forces_faiblesses" class="section">
+        <div class="barre-separation centered">
+            <div class="inner-barre"></div>
+        </div>
+        <span>WAAPI (Web Animation API)</span>
+        <h2>Forces et Faiblesses</h2>
+        <div class="tableau">
+            <div class="faiblesses">
+                <img class="tableau-img" src="../image/pouce-bas.png" alt="Pouce baissé" height="14%" width="6%">
+                <div class="txt-section">
+                    <ul>
+                        <li> Documentation en évolution avec peu de tutoriels sur le sujet pour le moment</li>
+                        <li> Existence de librairies Javascript offrant plus de choses pré-faites (ex : GSAP,
+                            Animate.js)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="forces">
+                <img class="tableau-img" src="../image/pouce-haut.png" alt="Pouce en l'air" height="14%" width="6%">
+                <div class="txt-section">
+                    <ul>
+                        <li> Usage adapté pour les animations complexes contrairement au CSS</li>
+                        <li> Possibilité de contrôler les animations avec des méthodes (play, stop, finish, cancel)</li>
+                        <li> Permet de se passer de librairies en utilisant des fonctions natives du navigateur, offrant un
+                            gain de performance
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="outils" class="section">
+        <div class="barre-separation centered">
+            <div class="inner-barre"></div>
+        </div>
+        <h2>De quoi a-t-on besoin pour l'utiliser ?</h2>
+        <div class="txt-section">
+            <p>Pour utiliser l'API, il suffit d'avoir un éditeur de texte pour écrire et éditer du code HTML, 
+                CSS et Javascript et de comprendre les propriétés permettant d'animer une forme ou un svg.
+            </p>
+        </div>
+    </div>
+
+    <div id="utilisation" class="section">
+        <div class="barre-separation centered">
+            <div class="inner-barre"></div>
+        </div>
+        <span>Reprise de l'article réalisé par Guillaume Duverger sur WAAPI</span>
+        <h2>Exemple</h2>
+        <div class="exemple">
+            <div class="demo-animation">
+                <div class="exemple-texte-anime">
+                    <span>Je suis un texte animé</span>
+                </div>
+                <div class="explications">
+                    <span class="font-size-x-large">Explications : </span>
+                    <p>Création de l'animation avec <b>animate()</b></p>
+                    <ul>
+                        <li>Donner au moins un objet au 1er tableau pour avoir les images de l'animation en précisant (ici une translation de -100% la taille de l'élément vers le bas) la propriété à appliquer sur l'objet (un objet = une image de l'animation)</li>
+                        <li>Indiquer les propriétés à appliquer sur l'animation entière dans le 2nd tableau avec obligatoirement la propriété "duration" d'indiquée</li>
+                    </ul><br>
+                </div>
+                <div class="resultats">
+                    <span class="font-size-x-large">Résultats de l'animation : </span>
+                    <p>Obtention d'un texte se déplacant de bas en haut infiniment, 
+                        avec une durée de 500 secondes entre le moment où le texte est à sa coordonnée x=0 et où il a effectué sa translation vers y=-100% et inversement </b></p>
+                </div>
+            </div>
+            
+            <aside class="code">
+                <span class="font-size-x-large">Code correspondant : </span>
+                <pre><code>const monElement = document.querySelector('.exemple-texte-anime')
+    .animate({
+        transform: ['translate3d(0,-100%,0)'],
+    }, {
+        direction: 'alternate',
+        duration: 500,
+        iterations: Infinity,
+    });</code>
+                </pre>
+            </aside>
+        </div>
+    </div>
+
+    <div id="sitographie" class="section">
+        <div class="barre-separation centered">
+            <div class="inner-barre"></div>
+        </div>
+        <h2>Sitographie et documentation</h2>
+        <div class="txt-section text-centered">
+            <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API">Documentation WAAPI</a><br>
+            <a href="https://drafts.csswg.org/web-animations-1/">Spécifications WAAPI</a><br>
+            <a href="https://www.guyom-design.com/blog/articles/articles-dev/javascript/waapi/#waapi4">Article de Guillaume Duverner sur WAAPI</a><br>
+            <a href="https://danielcwilson.com/talks/2017/animations/#/">Diaporama de Dan Wilson intitulé "Gaining Control with the Web Animations API"</a><br>
+            <a href="https://www.youtube.com/watch?v=rTMEYffoUVc">Tutoriel utilisé pour l'animation de bienvenu</a>
+        </div>
+    </div>
+    <hr>
+    <footer>
+        <span>Réalisée par Kim-Anh TRAN - DAWIN A (2022)</span>
+    </footer>
+    <script type="text/javascript" src="../js/index.js"></script>
+
+</body>
+
+</html>

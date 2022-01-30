@@ -1,0 +1,54 @@
+pre, code {
+    font-family: monospace, monospace;
+}
+pre {
+    overflow: auto;
+    background: black;
+    padding-left: 0 ;
+}
+pre > code {
+    display: block;
+    padding: 1rem;
+    font-size: larger;
+    font-family: monospace;
+    color: white;
+    word-wrap: normal;
+}
+
+/* --------------------------MEDIA QUERIES-------------------------------*/
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .exemple-texte-anime{
+        font-size: x-large;
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+        text-align: center;
+    }
+    .exemple{
+        display: flex;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-top: 1rem;
+        flex-direction: column;
+    }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .exemple-texte-anime{
+        font-size: xx-large;
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+    }
+
+    .demo-animation, aside{
+        width: 50%;
+        margin: 1rem;
+    }
+    .exemple{
+        display: flex;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-top: 1rem;
+    }
+}
+/* -------------------------FIN MEDIA QUERIES------------------------------*/

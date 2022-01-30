@@ -1,0 +1,93 @@
+body {
+    background-color: #311554;
+    margin: 1.5%;
+    font-family: "Ubuntu";
+}
+
+span, a, p, ul{
+    color: white;
+    font-size: larger;
+}
+
+.font-size-x-large{
+    font-size: x-large;
+}  
+
+li:not(:last-child) { 
+    margin-bottom: 10px;  
+ }
+
+.menu-header > a{
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+
+
+.centered{
+    display: flex;
+    justify-content: center;
+}
+
+.text-centered{
+    text-align: center;
+}
+
+#sitographie{
+    margin-bottom: 5rem;
+}
+
+hr {
+    background: #F6BFFF;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    header{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    header > .left-header{
+        text-align: center;
+        font-weight: bolder;
+    }
+
+    header > .menu-header{
+        justify-content: space-evenly;
+    }
+
+    .txt-section > p {
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+    
+    footer {
+        display: flex;
+        justify-content: center;
+        bottom: 100%;
+        text-align: center;
+    }
+
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    header{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    header > .left-header{
+        justify-content: start;
+    }
+    
+    header > .menu-header{
+        justify-content: end; 
+    }
+    footer {
+        display: flex;
+        justify-content: center;
+        bottom: 100%;
+    }
+}
